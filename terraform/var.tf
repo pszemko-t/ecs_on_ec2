@@ -7,15 +7,15 @@ variable "instance_type" {
 }
 
 variable "max_instances" {
-  default = 1
+  default = 2
 }
 
 variable "min_instances" {
-  default = 1
+  default = 2
 }
 
 variable "desired_task_count" {
-  default = 1
+  default = 2
 }
 
 # So it will be possible that half of Your tasks must be running during deployment to service

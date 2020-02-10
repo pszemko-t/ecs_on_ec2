@@ -9,10 +9,6 @@ resource "aws_launch_configuration" "ecs-launch-config" {
 # Using AMI id in launch config name is a workaround for problems with recreating the autoscaling group
   name = "ecs-launch-config-${data.aws_ami.ecs-ami.id}"
   iam_instance_profile = aws_iam_instance_profile.ecs-instance-profile.id
-
-  lifecycle {
-    create_before_destroy = true
-  }
   security_groups = [aws_security_group.ecs_test_sg.id]
   # Please attach public IP only if needed...
   associate_public_ip_address = "true"
