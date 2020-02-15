@@ -14,7 +14,7 @@ resource "aws_ecs_task_definition" "esc_test_task" {
     "name": "nginx",
     "image": "nginx",
     "cpu" : 1024,
-    "memory" : 500,
+    "memory" : 800,
     "essential": true,
     "portMappings": [
       {
