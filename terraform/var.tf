@@ -54,7 +54,7 @@ data "aws_ami" "ecs-ami" {
   }
 }
 
-# Thanks to output after terraform apply we will know the address of the ECS cluster (to load it from the internet)
+# Thanks to output after cluster apply we will know the address of the ECS cluster (to load it from the internet)
 output "address" {
   value = aws_lb.ecs-load-balancer.dns_name
 }
